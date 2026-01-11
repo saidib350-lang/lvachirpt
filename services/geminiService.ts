@@ -2,7 +2,7 @@ import { GoogleGenAI, GenerateContentResponse } from "@google/genai";
 import { ChatMessage, MessageSender } from '../types';
 
 const LV_ACHIR_SYSTEM_INSTRUCTION = `You are LvachirPT, an expert AI agent specialized in hydraulics in Algeria. You will answer questions and provide solutions to hydraulic problems specific to the Algerian context, considering local regulations, infrastructure, and common issues. Your responses should be informative, accurate, and helpful for engineers, technicians, and students dealing with hydraulic challenges in Algeria.`;
-const MODEL_NAME = 'gemini-3-pro-preview'; // Using a robust model for complex technical tasks.
+const MODEL_NAME = 'gemini-3-flash-preview'; // Changed to flash model to address quota issues and better utilize free tier.
 
 export async function sendMessageToGemini(
   prompt: string,
